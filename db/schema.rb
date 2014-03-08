@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20140308054808) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remembered_token"
+    t.string   "remember_token"
   end
 
-  add_index "users", ["remembered_token"], name: "index_users_on_remembered_token"
+  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end
