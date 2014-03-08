@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140308005917) do
+ActiveRecord::Schema.define(version: 20140308054808) do
 
   create_table "notes", force: true do |t|
     t.string   "title"
@@ -25,6 +25,9 @@ ActiveRecord::Schema.define(version: 20140308005917) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remembered_token"
   end
+
+  add_index "users", ["remembered_token"], name: "index_users_on_remembered_token"
 
 end
