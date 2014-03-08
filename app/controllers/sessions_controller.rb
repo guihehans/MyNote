@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  respond_to :html,:json
+  respond_to :json
   def new
   end
 

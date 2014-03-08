@@ -5,7 +5,7 @@ MyNote::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  post '/login', to: 'sessions#new', as: 'login'
+  post '/login', to: 'sessions#create', as: 'login'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
