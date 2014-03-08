@@ -19,3 +19,6 @@ By configuring the routes, the RESTful style is achieved.
 
 
 The test of API uses POSTMAN which generates multiple HTTP requests.
+
+test use case:
+name: guihehans password:password
