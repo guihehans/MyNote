@@ -10,6 +10,7 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
+    @user= User.find_by_remember_token @remember_token
   end
 
   # GET /notes/new
