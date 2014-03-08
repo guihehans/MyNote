@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-      @user = User.find_by(name: params[:session][:name])
-      if @user == User.find_by(password: params[:session][:password])
+      @user = User.find_by(name: params[:name])
+      if @user == User.find_by(password: params[:password])
         # Sign the user in and redirect to the user's show page.
         sign_in @user
         render :json => @user.to_json
