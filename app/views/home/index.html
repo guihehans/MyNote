@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>AngularJS App</title>
+    <meta charset="utf-8">
+</head>
+<body ng-controller="LoginController">
+    <input type="text" name="name" required ng-model="username" />
+    <input type="password" name="password" required ng-model="password" />
+    <button ng-click="seeNotes()">See Notes</button>
+<ul>
+    <li ng-repeat="note in notes">
+        {{note.id}}
+        <p>{{note.title}}</p>
+    </li>
+</ul>
+  <pre>
+    infos:
+    username: {{ username }}
+    password: {{ password }}
+    token: {{token}}
+  </pre>
+</body>
+</html>

@@ -4,6 +4,8 @@ MyNote::Application.routes.draw do
   resources :users
 
   resources :sessions, only: [:new, :create, :destroy]
+
+  get '/', to: 'home#index', as: 'home'
   get '/notes', to: 'notes#index', as: 'notes'
   post '/login', to: 'sessions#create', as: 'login'
   # The priority is based upon order of creation: first created -> highest priority.
