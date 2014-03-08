@@ -4,7 +4,12 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+      @user = User.find_by_remember_token(params[:token])
+      if @user.nil?
+        render :nothing => true, :status => 401
+      else
+        render json: @user.notes.to_json
+      end
   end
 
   # GET /notes/1
@@ -72,4 +77,5 @@ class NotesController < ApplicationController
     def note_params
       params.require(:note).permit(:title, :user_id)
     end
+
 end

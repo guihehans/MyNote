@@ -1,25 +1,23 @@
 class SessionsController < ApplicationController
   respond_to :json
+
   def new
   end
 
   def create
       @user = User.find_by(name: params[:name])
-      if @user == User.find_by(password: params[:password])
+      if @user.password == params[:password]
         # Sign the user in and redirect to the user's show page.
         sign_in @user
-        render :json => @user.to_json
+        render :json => {token:@user.remember_token}.to_json
         return
       end
       else
         # Create an error message and re-render the signin form.
-        flash.now[:error] = 'Invalid email/password combination'
-        render 'new'
+        render :nothing => true, :status => 401
       end
   end
 
-  def destroy
-  end
 
 
   def sign_in(user)
