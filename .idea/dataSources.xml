@@ -10,7 +10,7 @@
     <data-source source="LOCAL" name="Rails MyNote: production" uuid="e8cfe3ef-5856-4645-adfa-fa4f4065070b">
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:db/production.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:postgresql:d44o0b5df61fo3</jdbc-url>
       <libraries />
     </data-source>
   </component>
