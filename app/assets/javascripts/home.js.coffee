@@ -23,3 +23,9 @@ window.LoginController = ($scope,$http) ->
       .success (data, status, headers, config) ->
         console.log(data)
         $scope.notes = data
+        $scope.info = status
+    loginRequest.error (response, status, headers, config) ->
+      console.log('error')
+      $scope.info = status
+      $scope.notes=[]
+      $scope.token=''

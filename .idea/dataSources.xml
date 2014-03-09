@@ -13,6 +13,12 @@
       <jdbc-url>jdbc:postgresql:d44o0b5df61fo3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails MyNote: test" uuid="eaab82e8-60a2-49d5-b345-b8c9ae63349a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 
